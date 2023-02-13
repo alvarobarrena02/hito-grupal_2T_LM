@@ -1,0 +1,145 @@
+.container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Inicio media queries adaptadas */
+main {
+    display: grid;
+    grid-template-areas:
+    'cab cab cab cab'
+    'men men men men'
+    'sec sec sec asi '
+    'sec sec sec asi '
+    'sec sec sec asi '
+    'pie pie pie pie';
+    grid-gap: 5px; /* separación entre las áreas */
+    padding-top: 15px;
+    margin-left: 10px;
+}
+/* Inicio header */
+#header {
+    grid-area: cab;
+    height: 150px;
+}
+
+#header > h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+/* Fin header */
+
+/* Inicio menú */
+#menu {
+    grid-area: men;
+    height: 50px; /* altura del menú */
+}
+
+#menu ul {
+    text-decoration: none; /* quita el subrayado de los enlaces */
+    list-style: none; /* quita los marcadores (los puntos) de la lista */
+    line-height: 25px; /* altura de cada elemento de la lista */
+    font-size: 20px; /* tamaño de la fuente */
+    margin-left: 23px;
+}
+
+#menu ul li a {
+    float: left; /* los elementos de la lista se colocan uno al lado del otro */
+    margin-right: 10px; /* margen entre los elementos de la lista */
+    color: white;
+    text-align: center;
+}
+
+#menu ul li a:hover {
+    color: #FF0000;
+}
+/* Fin menú */
+
+/* Inicio contenido */
+#content {
+    grid-area: sec;
+    width: 100%;
+    height: 100%;
+    background-color: #F0F0F0;
+    padding: 20px;
+    text-align: justify;
+}
+
+#explain > h1 {
+    padding: 15px;
+    text-align: center;
+}
+
+.titulo1 {
+    font-size: 45px;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+}
+
+.titulo2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+}
+/* Fin contenido */
+
+/* Inicio aside */
+aside {
+    grid-area: asi;
+    text-align: left;
+    font-size: 15px;
+}
+
+aside div > h3 {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+aside ul {
+    text-decoration: none;
+    list-style: none;
+    line-height: 25px;
+}
+
+aside ul li a {
+    color: mediumpurple;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Fin aside */
+
+/* Inicio footer */
+footer {
+    grid-area: pie;
+}
+
+footer > p {
+    font-weight: bold;
+    font-size: 18px;
+}
+/* Fin footer */
+
+@media screen and (max-width: 800px) {
+    main {
+        display: grid;
+        grid-template-areas:
+        'cab'
+        'men'
+        'sec'
+        'sec'
+        'asi'
+        'pie';
+        grid-gap: 5px;
+        padding: 5px;
+    }
+    #header {
+        grid-area: cab;
+        height: 200px; /* altura del header en las media queries*/
+    }
+}
+/* Fin media queries */
